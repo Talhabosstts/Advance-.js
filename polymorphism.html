@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class Car {
+            constructor(a , b){
+                this.num1 = a
+                this.num2 = b
+
+
+            }
+            start(){
+                document.write("Tesla  is starting .... from parent class", this.num1 + this.num2 ,"<br>")
+            }
+         }
+         class Electric_car extends Car{
+            constructor(a , b){
+                super(20 ,25)
+                this.num3 = a
+                this.num4 = b
+
+            }
+
+            start(){
+            super.start()
+            document.write("Tesla  is starting ..... from child class", this.num1 - this.num2, "<br>")
+
+            }
+            drive(){
+                document.write("Tesla is driving ..... from child class", this.num1 * this.num2, "<br>")
+            }
+         }
+         let tesla = new Electric_car(10 , 30)
+         tesla.start()
+         tesla.drive()
+    </script>
+</body>
+</html>
